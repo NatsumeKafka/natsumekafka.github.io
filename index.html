@@ -9,42 +9,59 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
             text-align: center;
         }
         .container {
             width: 60%;
             margin: auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
             margin-top: 50px;
         }
         img {
             width: 150px;
             border-radius: 50%;
+            border: 3px solid cyan;
         }
         h1 {
-            color: #333;
+            color: cyan;
         }
         .links a {
             text-decoration: none;
-            color: #007bff;
-            margin: 0 10px;
+            color: #00ffff;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .links a:hover {
+            color: #ff00ff;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px cyan;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="https://via.placeholder.com/150" alt="Ảnh đại diện">
-        <h1>Natsume Kafka</h1>
-        <p>💻 Developer | 🎨 Designer | 🚀 Tech Enthusiast</p>
-        <h2>Liên hệ</h2>
+        <h1 class="glow-text">Natsume Kafka</h1>
+        <p>💻 Lập trình viên | Top 1 thế giới</p>
+        
+        <h2 class="glow-text">Kỹ năng</h2>
+        <p>C++, C, C#, Python, HTML, CSS, JavaScript, SQL</p>
+        
+        <h2 class="glow-text">Dự án</h2>
+        <p>Đang cập nhật...</p>
+        
+        <h2 class="glow-text">Liên hệ</h2>
         <div class="links">
             <a href="#">GitHub</a>
             <a href="#">LinkedIn</a>
-            <a href="mailto:your.email@example.com">Email</a>
+            <a href="mailto:natsumekafka@outlook.com">Email</a>
         </div>
     </div>
 </body>
