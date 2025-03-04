@@ -1,11 +1,11 @@
-body{
+body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
     padding: 20px;
 }
 
-.container{
+.container {
     max-width: 600px;
     margin: 0 auto;
     background: white;
@@ -14,24 +14,24 @@ body{
     box-shadow: 0px 0px 10px rgba(red, green, blue, alpha);
 }
 
-h1{
+h1 {
     color:#333;
 }
 
-img{
+img {
     width: 150px;
     height: auto;
     border-radius: 50%;
     margin-top: 10px;
 }
 
-a{
+a {
     text-decoration: none;
     color: blue;
     font font-weight: bold;
 
 }
 
-a:hover{
+a:hover {
     color: red;
 }
