@@ -6,12 +6,40 @@
         <title>Trang của Natsume Kafka</title>
         <link rel="stylesheet" href="style.css">
     </head>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+
+    <audio id="bg-music" loop>
+        <source src="audio/background-music.mp3" type="audio/mp3">
+        Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+    
+    <script>
+        const audio = document.getElementById("bg-music");  
+        function playMusic() {
+            audio.play().catch(error => {
+                console.log("Tự động phát bị chặn, cần người dùng tương tác trước.");
+            });
+        }
+        window.addEventListener("load", playMusic);
+        document.addEventListener("click", () => {
+            if (audio.paused) {
+                playMusic();
+            }
+        }, { once: true });
+    </script>
+    
     <body>
+        <img src="Aigis.gif" alt="Aigis GIF" class="Aigis-gif">
+        <img src="Makoto.gif" alt="Makoto GIF" class="Makoto-gif">
         <div class="container">
-            <h1 id="line1"></h1>
-            <p id="line2"></p>
-            <p id="line3"></p>
+            <h1>Hello! I am Natsume Kafka</h1>
+            <p><strong id="typed-text"></strong></p>
+            <div class="button-container">
+                <a href="https://www.youtube.com/@KafkaNatsume" target="_blank" class="btn youtube-btn">YouTube</a>
+                <a href="mailto:natsumekafka@outlook.com" class="btn outlook-btn">Outlook</a>
+            </div>
         </div>
-        <script src="script.js"></script>
     </body>
 </html>
