@@ -7,22 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let lineIndex = 0;
     let charIndex = 0;
-    let currentElement = document.getElementById(lines[lineIndex].id);
-    let currentText = lines[lineIndex].text;
 
     function typeEffect() {
-        if (charIndex < currentText.length) {
-            currentElement.innerHTML += currentText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeEffect, 50); // Tốc độ gõ chữ
+        if (lineIndex >= lines.length) return; // Kết thúc nếu hết dòng
+
+        let currentElement = document.getElementById(lines[lineIndex].id);
+        if (!currentElement) return; // Kiểm tra nếu phần tử không tồn tại
+
+        currentElement.innerHTML = lines[lineIndex].text.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex < lines[lineIndex].text.length) {
+            setTimeout(typeEffect, 50);
         } else {
             lineIndex++;
-            if (lineIndex < lines.length) {
-                charIndex = 0;
-                currentElement = document.getElementById(lines[lineIndex].id);
-                currentText = lines[lineIndex].text;
-                setTimeout(typeEffect, 500); // Khoảng dừng giữa các dòng
-            }
+            charIndex = 0;
+            setTimeout(typeEffect, 500);
         }
     }
 
