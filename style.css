@@ -96,31 +96,6 @@ a {
     margin-top: 10px;
 }
 
-
-.btn {
-    text-decoration: none;
-    padding: 8px 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.3s;
-    text-align: center;
-    min-width: 100px;
-}
-
-.youtube-btn {
-    background-color: #FF0000;
-    color: white;
-}
-
-.outlook-btn {
-    background-color: #0072C6;
-    color: white;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -129,6 +104,12 @@ a {
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
+    text-align: center;
+    min-width: 100px;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 .youtube-btn {
@@ -153,3 +134,13 @@ a {
     transform: scale(1.1);
 }
 
+.tiktok-btn {
+    background-color: #000000;
+    color: white;
+}
+
+.tiktok-btn:hover {
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
